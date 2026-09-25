@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240568061094",
+    "project_id": "medora-9ccbd",
+    "storage_bucket": "medora-9ccbd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240568061094:android:87acaedaa591b13a16b867",
+        "android_client_info": {
+          "package_name": "com.bonnietech.medora"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp5NZsUD2xevCDnTkCeSWA9jqCRLDxXM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
