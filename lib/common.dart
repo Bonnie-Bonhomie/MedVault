@@ -21,7 +21,7 @@ class StatTile extends StatelessWidget {
     required this.label,
     required this.value,
     required this.icon,
-    this.color = AppColors.primary,
+    this.color = Colors.white,
     this.onTap,
   });
 
@@ -40,8 +40,10 @@ class StatTile extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(icon, color: color, size: 22),
-            const SizedBox(height: 12),
+            CircleAvatar(
+                backgroundColor: AppColors.primaryLight.withOpacity(0.5),
+                child: Icon(icon, color: color, size: 28,)),
+            const SizedBox(height: 8),
             Text(
               value,
               style: TextStyle(
