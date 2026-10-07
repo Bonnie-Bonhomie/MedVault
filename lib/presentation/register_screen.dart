@@ -16,7 +16,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _email = TextEditingController();
   final _password = TextEditingController();
   UserRole _role = UserRole.pharmacist;
-  bool _busy = false;
+  bool _busy = false, _obscure = true;
 
   @override
   void dispose() {
@@ -102,12 +102,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const SizedBox(height: 14),
               TextFormField(
                 controller: _password,
-                obscureText: true,
-                decoration: const InputDecoration(
+                obscureText: _obscure,
+                decoration: InputDecoration(
                   labelText: 'Password',
                   helperText: 'At least 6 characters',
                   prefixIcon: Icon(Icons.lock_outline),
+                  suffixIcon: IconButton(
+                    icon: Icon(_obscure
+                        ? Icons.visibility_outlined
+                        : Icons.visibility_off_outlined),
+                    onPressed: () =>
+                        setState(() => _obscure = !_obscure),
+                  ),
                 ),
+
                 validator: (v) => (v == null || v.length < 6)
                     ? 'Password must be at least 6 characters'
                     : null,
